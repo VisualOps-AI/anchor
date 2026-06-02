@@ -44,13 +44,13 @@ export function HomeMenu({ onBreatheClick, onVentClick, onClarityClick }: HomeMe
     <div
       className="relative flex items-center justify-center min-h-screen p-6 overflow-hidden"
       style={{
-        backgroundColor: "#0a0a0a",
-        background: "radial-gradient(ellipse at center, #171717 0%, #0a0a0a 50%, #050505 100%)",
+        backgroundColor: "#060608",
+        background: "radial-gradient(ellipse at center, #141418 0%, #08080a 55%, #040405 100%)",
       }}
     >
       {/* Header */}
       <motion.header
-        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center"
+        className="fixed top-0 left-0 right-0 z-50 flex flex-col items-center justify-center gap-1.5"
         style={{
           paddingTop: "max(1.5rem, env(safe-area-inset-top, 1.5rem))",
           paddingBottom: "0.75rem",
@@ -60,12 +60,22 @@ export function HomeMenu({ onBreatheClick, onVentClick, onClarityClick }: HomeMe
         transition={{ delay: 0.2, duration: 0.6 }}
       >
         <span
-          className="text-zinc-500 text-xs font-bold uppercase"
+          className="text-zinc-400 text-xs font-medium uppercase"
           style={{
-            letterSpacing: "0.5em",
+            letterSpacing: "0.55em",
+            textIndent: "0.55em",
           }}
         >
-          A N C H O R
+          Anchor
+        </span>
+        <span
+          className="text-zinc-600 text-sm italic"
+          style={{
+            fontFamily: "var(--font-serif)",
+            letterSpacing: "0.02em",
+          }}
+        >
+          find your ground
         </span>
       </motion.header>
 
@@ -210,7 +220,7 @@ export function HomeMenu({ onBreatheClick, onVentClick, onClarityClick }: HomeMe
           <span
             className="relative text-2xl tracking-[0.25em] uppercase"
             style={{
-              fontFamily: "'SF Mono', 'Fira Code', 'Consolas', monospace",
+              fontFamily: "var(--font-mono)",
               fontWeight: 300,
               color: "rgba(255, 255, 255, 0.95)",
               textShadow: "0 0 30px rgba(34, 211, 238, 0.8), 0 0 60px rgba(6, 182, 212, 0.5)",
@@ -316,7 +326,7 @@ export function HomeMenu({ onBreatheClick, onVentClick, onClarityClick }: HomeMe
           <span
             className="relative text-2xl tracking-[0.25em] uppercase"
             style={{
-              fontFamily: "'SF Mono', 'Fira Code', 'Consolas', monospace",
+              fontFamily: "var(--font-mono)",
               fontWeight: 300,
               color: "rgba(255, 255, 255, 0.8)",
               textShadow: "0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.2)",
@@ -428,7 +438,7 @@ export function HomeMenu({ onBreatheClick, onVentClick, onClarityClick }: HomeMe
           <span
             className="relative text-2xl tracking-[0.25em] uppercase"
             style={{
-              fontFamily: "'SF Mono', 'Fira Code', 'Consolas', monospace",
+              fontFamily: "var(--font-mono)",
               fontWeight: 300,
               color: "rgba(253, 230, 138, 0.95)",
               textShadow: "0 0 30px rgba(251, 191, 36, 0.8), 0 0 60px rgba(251, 191, 36, 0.5)",

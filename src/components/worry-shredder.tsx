@@ -52,8 +52,8 @@ export function WorryShredder({ onComplete }: WorryShredderProps) {
     <div
       className="relative flex flex-col items-center justify-center min-h-screen p-6 overflow-hidden"
       style={{
-        backgroundColor: "#0a0a0a",
-        background: "radial-gradient(ellipse at center, #141414 0%, #0a0a0a 50%, #050505 100%)",
+        backgroundColor: "#060608",
+        background: "radial-gradient(ellipse at center, #161210 0%, #08080a 55%, #040405 100%)",
       }}
     >
       {/* Background texture */}
@@ -120,16 +120,16 @@ export function WorryShredder({ onComplete }: WorryShredderProps) {
               transition={{ delay: 0.2, duration: 0.6 }}
             >
               <p
+                className="italic"
                 style={{
-                  fontFamily: "'SF Mono', 'Fira Code', 'Consolas', monospace",
+                  fontFamily: "var(--font-serif)",
                   fontWeight: 300,
-                  fontSize: "0.75rem",
-                  color: "rgba(255, 255, 255, 0.35)",
-                  letterSpacing: "0.2em",
-                  textTransform: "uppercase",
+                  fontSize: "1.35rem",
+                  color: "rgba(255, 255, 255, 0.55)",
+                  letterSpacing: "0.01em",
                 }}
               >
-                Type your worry and release it
+                Type your worry, then release it
               </p>
             </motion.div>
 
@@ -178,7 +178,7 @@ export function WorryShredder({ onComplete }: WorryShredderProps) {
                     autoFocus
                     className="w-full px-6 py-5 bg-transparent outline-none"
                     style={{
-                      fontFamily: "'SF Mono', 'Fira Code', 'Consolas', monospace",
+                      fontFamily: "var(--font-mono)",
                       fontWeight: 300,
                       fontSize: "1.1rem",
                       color: "rgba(255, 255, 255, 0.9)",
@@ -270,7 +270,7 @@ export function WorryShredder({ onComplete }: WorryShredderProps) {
                 >
                   <span
                     style={{
-                      fontFamily: "'SF Mono', 'Fira Code', 'Consolas', monospace",
+                      fontFamily: "var(--font-mono)",
                       fontWeight: 400,
                       fontSize: "1rem",
                       color: worry ? "rgba(252, 165, 165, 0.95)" : "rgba(255, 255, 255, 0.3)",
@@ -310,7 +310,7 @@ export function WorryShredder({ onComplete }: WorryShredderProps) {
                 key={particle.id}
                 className="absolute"
                 style={{
-                  fontFamily: "'SF Mono', 'Fira Code', 'Consolas', monospace",
+                  fontFamily: "var(--font-mono)",
                   fontSize: "1.8rem",
                   fontWeight: 300,
                   color: "rgba(255, 255, 255, 0.9)",
@@ -382,7 +382,7 @@ export function WorryShredder({ onComplete }: WorryShredderProps) {
 
               <motion.p
                 style={{
-                  fontFamily: "'SF Mono', 'Fira Code', 'Consolas', monospace",
+                  fontFamily: "var(--font-mono)",
                   fontWeight: 300,
                   fontSize: "1rem",
                   color: "rgba(134, 239, 172, 0.9)",
@@ -398,18 +398,19 @@ export function WorryShredder({ onComplete }: WorryShredderProps) {
               </motion.p>
 
               <motion.p
+                className="italic"
                 style={{
-                  fontFamily: "'SF Mono', 'Fira Code', 'Consolas', monospace",
+                  fontFamily: "var(--font-serif)",
                   fontWeight: 300,
-                  fontSize: "0.7rem",
-                  color: "rgba(255, 255, 255, 0.4)",
-                  letterSpacing: "0.15em",
+                  fontSize: "1.05rem",
+                  color: "rgba(255, 255, 255, 0.45)",
+                  letterSpacing: "0.01em",
                 }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.6 }}
               >
-                Now, breathe...
+                Now, breathe…
               </motion.p>
             </motion.div>
           </motion.div>

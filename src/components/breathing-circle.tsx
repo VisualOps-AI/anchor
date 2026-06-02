@@ -77,7 +77,10 @@ export function BreathingCircle({ onClose }: BreathingCircleProps) {
   return (
     <div
       className="relative flex items-center justify-center min-h-screen overflow-hidden"
-      style={{ backgroundColor: "#0a0a0a" }}
+      style={{
+        backgroundColor: "#060608",
+        background: "radial-gradient(ellipse at center, #0c1418 0%, #08080a 55%, #040405 100%)",
+      }}
     >
       {/* Close button */}
       {onClose && (
@@ -200,7 +203,7 @@ export function BreathingCircle({ onClose }: BreathingCircleProps) {
             key={isPressed ? phase : "hold"}
             className="relative z-10 uppercase tracking-[0.3em]"
             style={{
-              fontFamily: "'SF Mono', 'Fira Code', 'Consolas', monospace",
+              fontFamily: "var(--font-mono)",
               fontWeight: 300,
               fontSize: "1rem",
               color: isPressed ? "rgba(255, 255, 255, 0.95)" : "rgba(255, 255, 255, 0.6)",
@@ -221,19 +224,19 @@ export function BreathingCircle({ onClose }: BreathingCircleProps) {
 
       {/* Subtle instruction text */}
       <motion.p
-        className="absolute bottom-12 text-center"
+        className="absolute bottom-12 text-center italic"
         style={{
-          fontFamily: "'SF Mono', 'Fira Code', 'Consolas', monospace",
+          fontFamily: "var(--font-serif)",
           fontWeight: 300,
-          fontSize: "0.75rem",
-          color: "rgba(255, 255, 255, 0.3)",
-          letterSpacing: "0.2em",
+          fontSize: "1rem",
+          color: "rgba(255, 255, 255, 0.35)",
+          letterSpacing: "0.02em",
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: isPressed ? 0 : 1 }}
         transition={{ duration: 0.5 }}
       >
-        PRESS AND HOLD TO BEGIN
+        press and hold to begin
       </motion.p>
     </div>
   );
