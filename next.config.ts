@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import path from "path";
 import withPWAInit from "next-pwa";
 
 const withPWA = withPWAInit({
@@ -9,6 +10,7 @@ const withPWA = withPWAInit({
 });
 
 const nextConfig: NextConfig = {
+  outputFileTracingRoot: path.join(__dirname, "."),
   // Use webpack for build (next-pwa requires webpack)
   turbopack: {},
 };

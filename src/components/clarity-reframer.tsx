@@ -34,8 +34,8 @@ export function ClarityReframer({ onComplete }: ClarityReframerProps) {
     <div
       className="relative flex flex-col items-center justify-center min-h-screen p-6 overflow-hidden"
       style={{
-        backgroundColor: "#0a0a0a",
-        background: "radial-gradient(ellipse at center, #1a1408 0%, #0a0a0a 50%, #050505 100%)",
+        backgroundColor: "#060608",
+        background: "radial-gradient(ellipse at center, #18140a 0%, #08080a 55%, #040405 100%)",
       }}
     >
       {/* Close button with safe-area fix */}
@@ -137,13 +137,14 @@ export function ClarityReframer({ onComplete }: ClarityReframerProps) {
               transition={{ delay: 0.2, duration: 0.6 }}
             >
               <p
+                className="italic"
                 style={{
-                  fontFamily: "'SF Mono', 'Fira Code', 'Consolas', monospace",
+                  fontFamily: "var(--font-serif)",
                   fontWeight: 300,
-                  fontSize: "0.75rem",
-                  color: "rgba(251, 191, 36, 0.6)",
-                  letterSpacing: "0.2em",
-                  textTransform: "uppercase",
+                  fontSize: "1.35rem",
+                  color: "rgba(253, 230, 138, 0.75)",
+                  letterSpacing: "0.01em",
+                  lineHeight: 1.4,
                 }}
               >
                 Name one thing that went well today
@@ -195,7 +196,7 @@ export function ClarityReframer({ onComplete }: ClarityReframerProps) {
                     autoFocus
                     className="w-full px-6 py-5 bg-transparent outline-none"
                     style={{
-                      fontFamily: "'SF Mono', 'Fira Code', 'Consolas', monospace",
+                      fontFamily: "var(--font-mono)",
                       fontWeight: 300,
                       fontSize: "1.1rem",
                       color: "rgba(255, 255, 255, 0.9)",
@@ -287,7 +288,7 @@ export function ClarityReframer({ onComplete }: ClarityReframerProps) {
                 >
                   <span
                     style={{
-                      fontFamily: "'SF Mono', 'Fira Code', 'Consolas', monospace",
+                      fontFamily: "var(--font-mono)",
                       fontWeight: 400,
                       fontSize: "1rem",
                       color: clarity ? "rgba(253, 230, 138, 0.95)" : "rgba(255, 255, 255, 0.3)",
@@ -326,11 +327,11 @@ export function ClarityReframer({ onComplete }: ClarityReframerProps) {
                 }}
               >
                 <span
-                  className="text-amber-400 text-center px-4"
+                  className="text-amber-400 text-center px-4 italic"
                   style={{
-                    fontFamily: "'SF Mono', 'Fira Code', 'Consolas', monospace",
+                    fontFamily: "var(--font-serif)",
                     fontWeight: 400,
-                    fontSize: "1.5rem",
+                    fontSize: "1.75rem",
                     textShadow: `
                       0 0 20px rgba(251, 191, 36, 0.8),
                       0 0 40px rgba(251, 191, 36, 0.6),
@@ -411,7 +412,7 @@ export function ClarityReframer({ onComplete }: ClarityReframerProps) {
                 >
                   <motion.p
                     style={{
-                      fontFamily: "'SF Mono', 'Fira Code', 'Consolas', monospace",
+                      fontFamily: "var(--font-mono)",
                       fontWeight: 300,
                       fontSize: "2.5rem",
                       color: "rgba(253, 230, 138, 0.95)",
